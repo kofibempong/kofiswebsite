@@ -470,6 +470,33 @@
     .article-divider hr {
       border: none; border-top: 1px solid var(--color-border); margin: var(--space-lg) 0;
     }
+    .pull-quote {
+      border-left: 3px solid var(--color-accent); margin: var(--space-lg) 0;
+      padding: var(--space-sm) var(--space-md); font-family: var(--font-display);
+      font-size: 1.25rem; line-height: 1.5; color: var(--color-text);
+    }
+    .section-break {
+      text-align: center; color: var(--color-text-light); letter-spacing: 0.3em;
+      margin: var(--space-lg) 0; font-size: 0.9rem;
+    }
+    .download-card {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--color-accent-light); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 1.25rem 1.5rem; margin: var(--space-lg) 0;
+    }
+    .download-icon svg {
+      width: 28px; height: 28px; stroke: var(--color-accent);
+      fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .download-text { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; }
+    .download-text strong { font-size: 0.95rem; color: var(--color-text); }
+    .download-text span { font-size: 0.82rem; color: var(--color-text-secondary); }
+    .download-btn {
+      background: var(--color-accent); color: #fff; text-decoration: none;
+      padding: 0.55rem 1.1rem; border-radius: 5px; font-size: 0.85rem;
+      font-weight: 500; white-space: nowrap; transition: opacity 0.2s;
+    }
+    .download-btn:hover { opacity: 0.85; }
 
     /* CARD VISUAL — 56 FULTON */
     .card-visual-fulton {
@@ -751,7 +778,7 @@
             <span class="project-tag">Value-Add</span>
             <span class="project-tag">GP/LP Waterfall</span>
           </div>
-          <h3 class="project-card-title">Value-Add Apartment Acquisition — REPE Model</h3>
+          <h3 class="project-card-title">Real Estate Private Equity Value-Add Apartment Acquisition Model</h3>
           <p class="project-card-desc">Full private equity acquisition model for a 240-unit Class B value-add apartment. 36-month levered DCF, dual-tranche debt, renovation pipeline, and two-tier GP/LP waterfall with promote.</p>
         </div>
         <div class="project-card-footer">
@@ -786,9 +813,16 @@
   <section id="writing">
     <div class="section-header">
       <h2 class="section-title">Writing</h2>
-      <span class="section-count">1 Article — More Coming Soon</span>
+      <span class="section-count">2 Articles — More Coming Soon</span>
     </div>
     <div class="writing-grid">
+
+      <a class="writing-card stagger-in" onclick="showPage('article-bridging-gap')" style="cursor:pointer;">
+        <span class="writing-card-tag">Housing Finance</span>
+        <h3 class="writing-card-title">Bridging the Gap: A Primer on Affordable Housing Finance</h3>
+        <p class="writing-card-excerpt">A map of the affordable housing finance system for everyone who has sat in a room full of housing people and wondered whether they were the only one who felt lost.</p>
+        <span class="writing-card-date">March 2026</span>
+      </a>
 
       <a class="writing-card stagger-in" onclick="showPage('article-lihtc')" style="cursor:pointer;">
         <span class="writing-card-tag">Housing Policy</span>
@@ -804,12 +838,6 @@
         <span class="writing-card-date">Coming Soon</span>
       </div>
 
-      <div class="writing-card coming-soon stagger-in">
-        <span class="writing-card-tag">Analysis</span>
-        <h3 class="writing-card-title">The Case for Future-Proof Buildings in Uncertain Markets</h3>
-        <p class="writing-card-excerpt">Why designing for adaptability across asset classes may be a rational response to post-pandemic real estate volatility.</p>
-        <span class="writing-card-date">Coming Soon</span>
-      </div>
 
     </div>
   </section>
@@ -1021,7 +1049,7 @@
 
   <div class="pp-nav">
     <div class="pp-nav-label">Next Project</div>
-    <a onclick="showPage('repe')">Value-Add Apartment Acquisition — REPE Model →</a>
+    <a onclick="showPage('repe')">Real Estate Private Equity Value-Add Apartment Acquisition Model →</a>
   </div>
 
   <footer>
@@ -1364,7 +1392,7 @@
 
   <div class="pp-nav">
     <div class="pp-nav-label">Previous Project</div>
-    <a onclick="showPage('repe')">← Value-Add Apartment Acquisition — REPE Model</a>
+    <a onclick="showPage('repe')">← Real Estate Private Equity Value-Add Apartment Acquisition Model</a>
   </div>
 
   <footer>
@@ -1421,6 +1449,62 @@
     <p>None of these fixes are radical. They're adjustments to a program that already knows how to work.</p>
 
     <p>The affordable housing crisis will not be solved by large developers alone. The math doesn't work. The geography doesn't work. The community trust doesn't work. What we need is more builders, more relationships, more projects in more places. I don't have a policy lever to pull. But I do think the people who do should be asking why we've spent decades building a program that works and made it nearly impossible for half the builders who could use it to walk through the door.</p>
+
+  </div>
+
+  <div class="pp-nav">
+    <div class="pp-nav-label">Back to</div>
+    <a onclick="goHome('writing')">← Writing</a>
+  </div>
+
+  <footer>
+    <div class="footer-left">R. Kofi Bempong</div>
+    <div class="footer-links">
+      <a href="mailto:bempongkb@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/rkbempong" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+<div id="page-article-bridging-gap" class="page">
+
+  <div class="article-hero">
+    <a class="pp-back" onclick="goHome('writing')">← Back to writing</a>
+    <div class="article-tag">Housing Finance</div>
+    <h1 class="article-title">Bridging the Gap</h1>
+    <div class="article-meta-line">A Primer on Affordable Housing Finance · R. Kofi Bempong · March 2026</div>
+  </div>
+
+  <div class="article-body">
+
+    <p>Here is something nobody tells you before your first affordable housing finance meeting: the vocabulary alone can take months to learn. Capital stacks. Syndicators. QAPs. 4% versus 9% credits. I sat in classrooms and conference rooms where everyone seemed fluent in a language I had never been taught, nodding along to acronyms I was still Googling under the table.</p>
+
+    <p>I had come to graduate school to study place-based economic development, and it did not take long to realize that housing sits beneath everything else in that work. You cannot talk about neighborhood investment, economic mobility, or community well-being without eventually arriving at one question: who can afford to live here? That question led me to affordable housing. And affordable housing led me into a system that is genuinely, structurally complex.</p>
+
+    <div class="pull-quote">
+      It costs the same to build an apartment whether the future tenant earns $30,000 or $150,000. The gap between that cost and what lower-income renters can pay is what the entire system exists to close.
+    </div>
+
+    <p>The complexity is real, but it is not random. It is the accumulated result of decades of federal, state, and local programs, each created in response to a different political moment or housing crisis, none designed to fit neatly with the others. A single affordable housing project might require a developer to spend years assembling financing from ten or more sources, navigating separate applications, separate timelines, and separate compliance regimes for each one. Practitioners call the skill required to do this well "pattern recognition": the ability to see how different programs can be stitched together under different conditions.</p>
+
+    <p>I wrote this paper because I wanted that pattern to be visible from the beginning. Not something you piece together over years of trial and error, but a map you can hold in your hands on day one. It starts with the fundamentals of how real estate development is funded, then works through the specific mechanics of why affordable housing breaks the standard model and what fills the gap. The final chapter follows a real 76-unit project in Roxbury, Boston, through every layer of its capital stack, dollar by dollar, showing what it actually took to get the building built.</p>
+
+    <div class="section-break">* * *</div>
+
+    <h2>Who this is for</h2>
+
+    <p>If you are a student stepping into this field for the first time, a professional shifting from another sector, a community advocate trying to make sense of the deals being proposed in your neighborhood, or someone who has simply sat in a room full of housing finance people and wondered whether you were the only one who felt lost: you are not. The system really is this layered. This paper is meant to make the early part of the climb a little less steep.</p>
+
+    <div class="download-card">
+      <div class="download-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+      </div>
+      <div class="download-text">
+        <strong>Download the full paper</strong>
+        <span>Bridging the Gap: A Primer on Affordable Housing Finance (PDF)</span>
+      </div>
+      <a href="Bridging_the_Gap_Kofi_Bempong.pdf" download class="download-btn">Download</a>
+    </div>
 
   </div>
 
