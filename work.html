@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QJEPQLY52"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6QJEPQLY52');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — R. Kofi Bempong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #FAFAF7;
+      --color-text: #1A1A18;
+      --color-text-secondary: #5C5C57;
+      --color-text-light: #8A8A84;
+      --color-accent: #2C5F4B;
+      --color-accent-light: #E8F0EC;
+      --color-border: #E5E5E0;
+      --color-card-bg: #FFFFFF;
+      --color-tag-bg: #F0EFEA;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --max-width: 1200px;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 3rem;
+      --space-xl: 5rem;
+      --space-2xl: 8rem;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body); background: var(--color-bg);
+      color: var(--color-text); line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--color-accent); color: #fff; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,250,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-name {
+      font-family: var(--font-display); font-size: 1.15rem;
+      color: var(--color-text); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 400; color: var(--color-text-secondary);
+      text-decoration: none; letter-spacing: 0.03em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--color-accent); }
+
+    /* SECTIONS */
+    section { max-width: var(--max-width); margin: 0 auto; padding: var(--space-lg) 2rem; }
+    .section-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: var(--space-lg); padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .section-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; }
+    .section-count { font-size: 0.8rem; color: var(--color-text-light); }
+
+    /* PROJECT GRID */
+    .project-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+    .project-card {
+      background: var(--color-card-bg); border: 1px solid var(--color-border);
+      border-radius: 8px; overflow: hidden; text-decoration: none; color: inherit;
+      transition: all 0.3s; display: flex; flex-direction: column;
+    }
+    .project-card:hover {
+      border-color: var(--color-accent); box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .project-card-image {
+      width: 100%; aspect-ratio: 16/10; background: var(--color-tag-bg);
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .project-card-body { padding: var(--space-md); flex: 1; display: flex; flex-direction: column; }
+    .project-card-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .project-tag {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em;
+      text-transform: uppercase; padding: 0.25rem 0.6rem;
+      background: var(--color-tag-bg); border-radius: 3px; color: var(--color-text-secondary);
+    }
+    .project-card-title {
+      font-family: var(--font-display); font-size: 1.25rem; font-weight: 400;
+      margin-bottom: 0.5rem; line-height: 1.3;
+    }
+    .project-card-desc {
+      font-size: 0.9rem; font-weight: 300; color: var(--color-text-secondary);
+      line-height: 1.6; flex: 1;
+    }
+    .project-card-footer {
+      padding: 0 var(--space-md) var(--space-md);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .project-card-year { font-size: 0.8rem; color: var(--color-text-light); }
+    .project-card-arrow { font-size: 1.2rem; color: var(--color-accent); transition: transform 0.2s; }
+    .project-card:hover .project-card-arrow { transform: translateX(4px); }
+
+    /* CARD VISUAL — LIHTC */
+    .card-visual-lihtc {
+      width: 100%; height: 100%; padding: 1.5rem;
+      display: flex; flex-direction: column; justify-content: space-between;
+      background: linear-gradient(135deg, #f8f8f4 0%, #eef3ef 100%);
+    }
+    .cv-top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .cv-label {
+      font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--color-text-light);
+    }
+    .cv-amount {
+      font-family: var(--font-mono); font-size: 1.8rem; font-weight: 500;
+      color: var(--color-accent); letter-spacing: -0.02em;
+    }
+    .cv-bars { display: flex; gap: 3px; align-items: flex-end; height: 60px; }
+    .cv-bar { flex: 1; border-radius: 2px 2px 0 0; }
+    .cv-bar-1 { height: 100%; background: var(--color-accent); opacity: 0.9; }
+    .cv-bar-2 { height: 72%; background: var(--color-accent); opacity: 0.7; }
+    .cv-bar-3 { height: 58%; background: var(--color-accent); opacity: 0.5; }
+    .cv-bar-4 { height: 45%; background: var(--color-accent); opacity: 0.35; }
+    .cv-bar-5 { height: 30%; background: var(--color-accent); opacity: 0.25; }
+    .cv-bar-6 { height: 20%; background: var(--color-accent); opacity: 0.15; }
+    .cv-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+    .cv-stat { display: flex; flex-direction: column; gap: 0.1rem; }
+    .cv-stat-value { font-family: var(--font-mono); font-size: 0.9rem; font-weight: 500; color: var(--color-text); }
+    .cv-stat-label { font-size: 0.6rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* CARD VISUAL — REPE */
+    .card-visual-repe {
+      width: 100%; height: 100%; padding: 1.5rem;
+      display: flex; flex-direction: column; justify-content: space-between;
+      background: linear-gradient(135deg, #f5f4f0 0%, #eceae4 100%);
+    }
+    .card-visual-repe .cv-top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .card-visual-repe .cv-returns {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 1.5rem; margin-top: 0.5rem;
+    }
+    .card-visual-repe .cv-return-item { display: flex; flex-direction: column; gap: 0.1rem; }
+    .card-visual-repe .cv-return-value {
+      font-family: var(--font-mono); font-size: 1.3rem; font-weight: 500; color: var(--color-accent);
+    }
+    .card-visual-repe .cv-return-label {
+      font-size: 0.58rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .card-visual-repe .cv-waterfall { display: flex; gap: 2px; height: 40px; align-items: flex-end; }
+    .cv-wf-bar { border-radius: 2px 2px 0 0; }
+    .cv-wf-gp { width: 15%; background: var(--color-accent); opacity: 0.9; }
+    .cv-wf-lp { width: 85%; background: var(--color-accent); opacity: 0.4; }
+
+    /* CARD VISUAL — FULTON */
+    .card-visual-fulton {
+      width: 100%; height: 100%; padding: 1.5rem;
+      display: flex; flex-direction: column; justify-content: space-between;
+      background: linear-gradient(135deg, #f0f4f8 0%, #dce6ef 100%);
+    }
+    .card-visual-fulton .cv-thesis {
+      font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text);
+      line-height: 1.3; max-width: 90%;
+    }
+    .card-visual-fulton .cv-dual { display: flex; gap: 1rem; align-items: flex-end; }
+    .card-visual-fulton .cv-dual-item {
+      flex: 1; padding: 0.6rem; background: rgba(255,255,255,0.7);
+      border-radius: 4px; display: flex; flex-direction: column; gap: 0.15rem;
+    }
+    .card-visual-fulton .cv-dual-label {
+      font-size: 0.55rem; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--color-text-light);
+    }
+    .card-visual-fulton .cv-dual-value {
+      font-family: var(--font-mono); font-size: 1rem; font-weight: 500; color: var(--color-accent);
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: var(--max-width); margin: 0 auto; padding: var(--space-lg) 2rem;
+      border-top: 1px solid var(--color-border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-left { font-family: var(--font-display); font-size: 1rem; }
+    .footer-links { display: flex; gap: var(--space-md); }
+    .footer-links a {
+      font-size: 0.85rem; color: var(--color-text-secondary); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--color-accent); }
+
+    /* ANIMATIONS */
+    .stagger-in { opacity: 0; transform: translateY(16px); }
+    .stagger-in.visible { animation: fadeUp 0.5s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* HAMBURGER NAV */
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--color-text); transition: all 0.25s; transform-origin: center;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none; position: fixed; top: 57px; left: 0; right: 0;
+        background: rgba(250,250,247,0.97); backdrop-filter: blur(12px);
+        flex-direction: column; gap: 0; padding: 0.5rem 0;
+        border-bottom: 1px solid var(--color-border); z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0; }
+      .nav-links a { display: block; padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+      .project-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: var(--space-sm); text-align: center; padding: var(--space-lg) 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="/index.html">R. Kofi Bempong</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/writing.html">Writing</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/about.html#recognition">Recognition</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/kofi-bempong-cv.pdf" target="_blank">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section style="padding-top: calc(var(--space-2xl) + 2rem);">
+  <div class="section-header">
+    <h2 class="section-title">Selected Work</h2>
+    <span class="section-count">4 Projects</span>
+  </div>
+  <p style="font-size: 1.05rem; font-weight: 300; color: var(--color-text-secondary); margin-top: -2rem; margin-bottom: var(--space-lg); line-height: 1.6;">Real estate finance, affordable housing underwriting, mixed-use development, and place-based strategy.</p>
+  <div class="project-grid">
+
+    <a class="project-card stagger-in" href="/work/lihtc.html">
+      <div class="project-card-image">
+        <div class="card-visual-lihtc">
+          <div class="cv-top">
+            <div>
+              <div class="cv-label">Total Development Cost</div>
+              <div class="cv-amount">$25.8M</div>
+            </div>
+            <div class="cv-label">4% LIHTC</div>
+          </div>
+          <div class="cv-bars">
+            <div class="cv-bar cv-bar-1"></div>
+            <div class="cv-bar cv-bar-2"></div>
+            <div class="cv-bar cv-bar-3"></div>
+            <div class="cv-bar cv-bar-4"></div>
+            <div class="cv-bar cv-bar-5"></div>
+            <div class="cv-bar cv-bar-6"></div>
+          </div>
+          <div class="cv-bottom">
+            <div class="cv-stat">
+              <span class="cv-stat-value">51</span>
+              <span class="cv-stat-label">Units</span>
+            </div>
+            <div class="cv-stat">
+              <span class="cv-stat-value">8</span>
+              <span class="cv-stat-label">Capital Sources</span>
+            </div>
+            <div class="cv-stat">
+              <span class="cv-stat-value">1.148x</span>
+              <span class="cv-stat-label">DSCR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <div class="project-card-tags">
+          <span class="project-tag">Housing Finance</span>
+          <span class="project-tag">LIHTC</span>
+          <span class="project-tag">Financial Modeling</span>
+        </div>
+        <h3 class="project-card-title">1576 Blue Hill Ave — LIHTC Pro Forma</h3>
+        <p class="project-card-desc">Full 4% LIHTC development pro forma for a 51-unit mixed-income affordable housing project in Mattapan, Boston. Eight interconnected worksheets covering credit pricing, multi-source capital stacking, and 23-year operating projections.</p>
+      </div>
+      <div class="project-card-footer">
+        <span class="project-card-year">2025</span>
+        <span class="project-card-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="project-card stagger-in" href="/work/repe.html">
+      <div class="project-card-image">
+        <div class="card-visual-repe">
+          <div class="cv-top">
+            <div>
+              <div class="cv-label">Value-Add Acquisition</div>
+              <div class="cv-amount">$42.5M</div>
+            </div>
+            <div class="cv-label">240 Units</div>
+          </div>
+          <div class="cv-returns">
+            <div class="cv-return-item">
+              <span class="cv-return-value">35.3%</span>
+              <span class="cv-return-label">Levered IRR</span>
+            </div>
+            <div class="cv-return-item">
+              <span class="cv-return-value">2.37x</span>
+              <span class="cv-return-label">Equity Multiple</span>
+            </div>
+            <div class="cv-return-item">
+              <span class="cv-return-value">98.4%</span>
+              <span class="cv-return-label">GP IRR</span>
+            </div>
+            <div class="cv-return-item">
+              <span class="cv-return-value">5.50%</span>
+              <span class="cv-return-label">Exit Cap</span>
+            </div>
+          </div>
+          <div class="cv-waterfall">
+            <div class="cv-wf-bar cv-wf-gp" style="height:90%"></div>
+            <div class="cv-wf-bar cv-wf-lp" style="height:55%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <div class="project-card-tags">
+          <span class="project-tag">REPE</span>
+          <span class="project-tag">Value-Add</span>
+          <span class="project-tag">GP/LP Waterfall</span>
+        </div>
+        <h3 class="project-card-title">Real Estate Private Equity Value-Add Apartment Acquisition Model</h3>
+        <p class="project-card-desc">Full private equity acquisition model for a 240-unit Class B value-add apartment. 36-month levered DCF, dual-tranche debt, renovation pipeline, and two-tier GP/LP waterfall with promote.</p>
+      </div>
+      <div class="project-card-footer">
+        <span class="project-card-year">2025</span>
+        <span class="project-card-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="project-card stagger-in" href="/work/fulton.html">
+      <div class="project-card-image">
+        <div class="card-visual-fulton">
+          <div class="cv-thesis">Residential-to-office conversion embedded at design stage</div>
+          <div class="cv-dual">
+            <div class="cv-dual-item">
+              <span class="cv-dual-label">Total Dev. Cost</span>
+              <span class="cv-dual-value">$47.2M</span>
+            </div>
+            <div class="cv-dual-item">
+              <span class="cv-dual-label">Levered IRR</span>
+              <span class="cv-dual-value">27.7%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <div class="project-card-tags">
+          <span class="project-tag">Development</span>
+          <span class="project-tag">Design + Finance</span>
+          <span class="project-tag">Team Project</span>
+        </div>
+        <h3 class="project-card-title">56 Fulton Street — Future-Proof Development</h3>
+        <p class="project-card-desc">Ground-up 90-unit luxury multifamily on a city-owned North End site, designed to facilitate residential-to-office conversion. Full development model with SOFR construction loan, lease-up engine, and three-tier GP/LP waterfall.</p>
+      </div>
+      <div class="project-card-footer">
+        <span class="project-card-year">2025</span>
+        <span class="project-card-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="project-card stagger-in" href="/work/revive-farms.html">
+      <div class="project-card-image" style="background: #4a7c59; display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: center; color: #f5f0e8; padding: 1.5rem;">
+          <div style="font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; line-height: 1;">Revive</div>
+          <div style="font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; line-height: 1;">Farms</div>
+          <div style="width: 32px; height: 2px; background: #c8a84b; margin: 0.6rem auto;"></div>
+          <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85;">Bomfa, Ghana</div>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <div class="project-card-tags">
+          <span class="project-tag">Agro-Hospitality</span>
+          <span class="project-tag">Ghana</span>
+          <span class="project-tag">Development Finance</span>
+        </div>
+        <h3 class="project-card-title">Revive Farms Phase 1 — Agro-Hospitality Financial Model</h3>
+        <p class="project-card-desc">Full development and operating financial model for a 12-acre agro-hospitality resort in Bomfa, Ghana. Covers $2.9M capitalization, revenue waterfall across farm, lodging, and events, and a 10-year IRR analysis for equity investors.</p>
+      </div>
+      <div class="project-card-footer">
+        <span class="project-card-year">2025</span>
+        <span class="project-card-arrow">→</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">R. Kofi Bempong</div>
+  <div class="footer-links">
+    <a href="mailto:bempongkb@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/rkbempong" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const siblings = entry.target.parentElement.querySelectorAll('.stagger-in');
+        const i = Array.from(siblings).indexOf(entry.target);
+        entry.target.style.animationDelay = `${i * 0.1}s`;
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.stagger-in').forEach(el => obs.observe(el));
+</script>
+
+<script>
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
