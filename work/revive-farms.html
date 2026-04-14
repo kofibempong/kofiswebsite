@@ -318,6 +318,34 @@
 <tr><td>NOI margin</td><td>21.5%</td><td>26.5%</td><td>28.7%</td><td>31.0%</td><td>32.7%</td><td>33.2%</td><td>33.5%</td><td>33.6%</td></tr>
 <tr class="a"><td>CDA (4%)</td><td>$23K</td><td>$28K</td><td>$33K</td><td>$39K</td><td>$44K</td><td>$46K</td><td>$47K</td><td>$49K</td></tr>
 </table>
+<div style="margin-top:28px;margin-bottom:28px;">
+<div class="lb" style="margin-bottom:12px;">Capital structure</div>
+<div style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;">
+  <div style="position:relative;width:240px;height:240px;flex-shrink:0;">
+    <canvas id="pieC"></canvas>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#333;">
+      <span style="width:12px;height:12px;border-radius:2px;background:#7A8B6A;flex-shrink:0;"></span>
+      <span>Senior debt &nbsp;<strong>$513,572</strong> &nbsp;(31.9%)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#333;">
+      <span style="width:12px;height:12px;border-radius:2px;background:#A8B898;flex-shrink:0;"></span>
+      <span>Mezzanine debt &nbsp;<strong>$207,231</strong> &nbsp;(12.9%)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#333;">
+      <span style="width:12px;height:12px;border-radius:2px;background:#C49A5C;flex-shrink:0;"></span>
+      <span>LP equity &nbsp;<strong>$800,486</strong> &nbsp;(49.7%)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#333;">
+      <span style="width:12px;height:12px;border-radius:2px;background:#A07840;flex-shrink:0;"></span>
+      <span>GP equity &nbsp;<strong>$88,943</strong> &nbsp;(5.5%)</span>
+    </div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;font-size:11px;color:#888;">Total debt $720,803 (44.8%)&nbsp;&nbsp;·&nbsp;&nbsp;Total equity $889,429 (55.2%)</div>
+  </div>
+</div>
+</div>
+
 <div class="g2" style="margin-top:24px;">
 <div>
 <div class="lb">Financing partners</div>
@@ -481,6 +509,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
+new Chart(document.getElementById('pieC'),{type:'doughnut',data:{labels:['Senior debt ($513,572)','Mezzanine debt ($207,231)','LP equity ($800,486)','GP equity ($88,943)'],datasets:[{data:[513572,207231,800486,88943],backgroundColor:['#7A8B6A','#A8B898','#C49A5C','#A07840'],borderColor:'#ffffff',borderWidth:3,hoverOffset:10}]},options:{responsive:true,maintainAspectRatio:false,cutout:'55%',plugins:{legend:{display:false},tooltip:{backgroundColor:'#333',titleFont:{family:'DM Sans',size:12},bodyFont:{family:'DM Sans',size:11},padding:10,cornerRadius:6,callbacks:{label:function(ctx){var total=ctx.dataset.data.reduce(function(a,b){return a+b;},0);var pct=((ctx.parsed/total)*100).toFixed(1);return ctx.label+' ('+pct+'%)';}}}},plugins:[{id:'centerText',afterDraw:function(chart){var ctx=chart.ctx;var w=chart.chartArea.right-chart.chartArea.left;var h=chart.chartArea.bottom-chart.chartArea.top;var cx=chart.chartArea.left+w/2;var cy=chart.chartArea.top+h/2;ctx.save();ctx.textAlign='center';ctx.fillStyle='#333';ctx.font='500 20px DM Sans';ctx.fillText('$1.61M',cx,cy-4);ctx.fillStyle='#888';ctx.font='400 9px DM Sans';ctx.fillText('TOTAL SOURCES',cx,cy+14);ctx.restore();}}]}});
 new Chart(document.getElementById('arrC'),{type:'bar',data:{labels:['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024*','2025*'],datasets:[{data:[897,933,980,1045,1130,355,620,960,1200,1440,1700],backgroundColor:['#A8B898','#A8B898','#A8B898','#A8B898','#7A8B6A','#8B3A2A','#C49A5C','#A8B898','#A8B898','#7A8B6A','#7A8B6A'],borderRadius:2,barPercentage:0.75}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{font:{size:8},color:'#888',maxRotation:45},grid:{display:false}},y:{ticks:{font:{size:8},color:'#888'},grid:{color:'#f0f0f0'},min:0,max:1900}},plugins:{legend:{display:false}}},plugins:[{id:'bv',afterDatasetsDraw:function(c){var x=c.ctx,m=c.getDatasetMeta(0);x.save();x.font='500 7px sans-serif';x.fillStyle='#555';x.textAlign='center';m.data.forEach(function(b,i){var v=c.data.datasets[0].data[i];x.fillText(v>=800?(v/1000).toFixed(1)+'M':v+'K',b.x,b.y-4);});x.restore();}}]});
 new Chart(document.getElementById('dscrC'),{type:'bar',data:{labels:['Yr 1','Yr 2','Yr 3','Yr 4','Yr 5','Yr 6','Yr 7'],datasets:[{data:[1.95,2.49,3.13,3.49,3.72,3.87,3.53],backgroundColor:'#7A8B6A',borderRadius:2,barPercentage:0.6}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{font:{size:9},color:'#888'},grid:{display:false}},y:{ticks:{font:{size:8},color:'#888',callback:function(v){return v.toFixed(1)+'x';}},grid:{color:'#f0f0f0'},min:0,max:4.5}},plugins:{legend:{display:false}}},plugins:[{id:'cv',afterDraw:function(c){var y=c.scales.y.getPixelForValue(1.30),x=c.ctx;x.save();x.setLineDash([5,3]);x.strokeStyle='#8B3A2A';x.lineWidth=1.5;x.beginPath();x.moveTo(c.chartArea.left,y);x.lineTo(c.chartArea.right,y);x.stroke();x.setLineDash([]);x.fillStyle='#8B3A2A';x.font='500 8px sans-serif';x.fillText('1.30x covenant',c.chartArea.right-70,y-5);x.restore();}},{id:'lb',afterDatasetsDraw:function(c){var x=c.ctx,m=c.getDatasetMeta(0);x.save();x.font='500 9px sans-serif';x.fillStyle='#7A8B6A';x.textAlign='center';m.data.forEach(function(b,i){x.fillText(c.data.datasets[0].data[i].toFixed(2)+'x',b.x,b.y-5);});x.restore();}}]});
 new Chart(document.getElementById('revC'),{type:'bar',data:{labels:['Yr 1','Yr 2','Yr 3','Yr 4','Yr 5','Yr 6','Yr 7','Yr 8'],datasets:[{label:'Revenue',data:[566,707,834,969,1095,1148,1187,1220],backgroundColor:'#C49A5C',borderRadius:2,barPercentage:0.8},{label:'GOP',data:[226,300,370,441,508,536,555,572],backgroundColor:'#A8B898',borderRadius:2,barPercentage:0.8},{label:'NOI',data:[122,187,239,301,359,382,397,411],backgroundColor:'#7A8B6A',borderRadius:2,barPercentage:0.8}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{font:{size:9},color:'#888'},grid:{display:false}},y:{ticks:{font:{size:8},color:'#888',callback:function(v){return '$'+v+'K';}},grid:{color:'#f0f0f0'},min:0,max:1400}},plugins:{legend:{display:false}}}});
