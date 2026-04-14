@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QJEPQLY52"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6QJEPQLY52');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revive Farms Phase 1 — R. Kofi Bempong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    /* SITE NAV */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,250,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid #E5E5E0;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-name {
+      font-family: 'DM Serif Display', Georgia, serif; font-size: 1.15rem;
+      color: #1A1A18; text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 400; color: #5C5C57;
+      text-decoration: none; letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #2C5F4B; }
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101;
+    }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: #1A1A18; transition: all 0.25s; transform-origin: center; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .pp-back {
+      display: inline-block; font-size: 0.8rem; color: #5C5C57; text-decoration: none;
+      letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; transition: color 0.2s;
+    }
+    .pp-back:hover { color: #2C5F4B; }
+    footer {
+      max-width: 1100px; margin: 0 auto; padding: 2rem 40px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid #eee;
+    }
+    .footer-left { font-family: 'DM Serif Display', Georgia, serif; font-size: 1rem; color: #1A1A18; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.85rem; color: #5C5C57; text-decoration: none; }
+    .footer-links a:hover { color: #2C5F4B; }
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none; position: fixed; top: 57px; left: 0; right: 0;
+        background: rgba(250,250,247,0.97); backdrop-filter: blur(12px);
+        flex-direction: column; gap: 0; padding: 0.5rem 0;
+        border-bottom: 1px solid #E5E5E0; z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0; }
+      .nav-links a { display: block; padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.25rem; }
+    }
+
+    /* REVIVE FARMS STYLES */
+    body{font-family:'DM Sans',sans-serif;background:#fff;color:#333;line-height:1.6;padding-top:57px;}
+    :root{--sage:#7A8B6A;--ochre:#C49A5C;--ls:#A8B898;--sand:#E8DCC8;--terra:#8B3A2A;}
+    .back-bar{max-width:1100px;margin:0 auto;padding:24px 40px 0;}
+    .hero{background:var(--sage);padding:48px 60px 40px;}
+    .hero h1{font-size:32px;font-weight:500;color:#fff;margin-bottom:4px;}
+    .hero .sub{font-size:14px;color:rgba(255,255,255,0.6);}
+    .hero .tag{font-size:16px;color:var(--ochre);margin-top:12px;font-style:italic;}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 40px;}
+    section{padding:40px 0;border-bottom:1px solid #eee;}
+    section:last-child{border-bottom:none;}
+    .st{font-size:18px;font-weight:500;color:var(--sage);margin-bottom:4px;}
+    .ss{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;}
+    .lb{font-size:9px;color:#888;text-transform:uppercase;letter-spacing:1.5px;font-weight:500;margin-bottom:6px;}
+    p{font-size:13px;color:#666;line-height:1.65;margin-bottom:12px;}
+    .stats{display:grid;gap:0;background:#fff;border-bottom:1px solid #eee;}
+    .s7{grid-template-columns:repeat(7,1fr);}
+    .s4{grid-template-columns:repeat(4,1fr);}
+    .stat{text-align:center;padding:20px 8px;border-right:1px solid #eee;}
+    .stat:last-child{border-right:none;}
+    .stat .v{font-size:24px;font-weight:500;color:var(--sage);}
+    .stat .v.d{color:#1e1e1e;}
+    .stat .v.o{color:var(--ochre);}
+    .stat .l{font-size:9px;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:3px;}
+    .stat .s{font-size:8px;color:#aaa;margin-top:1px;}
+    table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:6px;}
+    th{text-align:center;font-size:9px;text-transform:uppercase;letter-spacing:0.8px;color:#fff;background:var(--sage);padding:6px 8px;font-weight:500;}
+    th:first-child{text-align:left;}
+    td{padding:5px 8px;border-bottom:1px solid #eee;text-align:center;font-variant-numeric:tabular-nums;color:#333;}
+    td:first-child{text-align:left;font-weight:500;}
+    tr.a td{background:#f9f9f9;}
+    tr.hl td{background:#f5ead4;font-weight:500;color:var(--sage);}
+    tr.tot td{background:var(--sand);border-top:2px solid var(--sage);font-weight:500;color:var(--sage);}
+    td.pp{background:#e3f2fd;color:#185FA5;font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:0.8px;}
+    td.pr{background:#fff3e0;color:#854F0B;font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:0.8px;}
+    td.ps{background:var(--sand);color:#5a4a2a;font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:0.8px;}
+    th.bc{background:var(--ochre);}
+    td.bc{background:#f5ead4;font-weight:500;}
+    .ok{color:var(--sage);font-weight:500;}
+    .wn{color:var(--ochre);font-weight:500;}
+    tr.br td{color:var(--terra);font-weight:500;}
+    .nt{font-size:9px;color:#999;font-style:italic;margin-top:4px;}
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+    .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+    .card{border:1px solid #e0e0e0;border-radius:8px;padding:16px 14px;text-align:center;}
+    .card svg{display:block;margin:0 auto 10px;}
+    .card .ct{font-size:12px;font-weight:500;color:#333;margin-bottom:5px;}
+    .card .cd{font-size:10px;color:#666;line-height:1.5;}
+    .wf{display:flex;gap:0;border-radius:5px;overflow:hidden;height:56px;margin-bottom:6px;}
+    .wf>div{flex:1;padding:6px 4px;text-align:center;display:flex;flex-direction:column;justify-content:center;color:#fff;}
+    .wf .wh{font-size:7px;text-transform:uppercase;letter-spacing:0.6px;opacity:0.7;}
+    .wf .wv{font-size:16px;font-weight:500;margin:1px 0;}
+    .wf .wl{font-size:7px;opacity:0.5;}
+    .pill{display:flex;gap:10px;margin-bottom:14px;}
+    .pill-i{flex-shrink:0;width:36px;height:36px;background:var(--sand);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+    .pill-i.gold{background:#f5ead4;}
+    .pill .pt{font-size:11px;font-weight:500;color:#333;margin-bottom:3px;}
+    .pill .pd{font-size:9px;color:#666;line-height:1.55;}
+    .co{background:var(--sage);border-radius:8px;padding:20px 32px;display:flex;align-items:center;justify-content:center;gap:32px;margin:16px 0;}
+    .co .cv{font-size:28px;font-weight:500;color:#fff;text-align:center;}
+    .co .cl{font-size:10px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:1.2px;margin-top:4px;text-align:center;}
+    .co .eq{font-size:24px;color:var(--ochre);}
+    .closing{background:var(--sage);border-radius:8px;padding:24px 48px;text-align:center;margin-top:20px;}
+    .closing .bd{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:12px;}
+    .closing .pn{font-size:18px;font-weight:500;color:var(--ochre);font-style:italic;}
+    .cw{position:relative;width:100%;}
+    @media(max-width:768px){
+      .hero{padding:32px 24px 28px;}
+      .hero h1{font-size:24px;}
+      .wrap{padding:0 20px;}
+      .g2,.g3{grid-template-columns:1fr;}
+      .s7,.s4{grid-template-columns:repeat(2,1fr);}
+      .back-bar{padding:16px 20px 0;}
+      .co{flex-direction:column;gap:12px;padding:16px;}
+      .closing{padding:20px 20px;}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="/index.html">R. Kofi Bempong</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/index.html">Work</a></li>
+      <li><a href="/writing.html">Writing</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/about.html#recognition">Recognition</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/kofi-bempong-cv.pdf" target="_blank">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="back-bar"><a class="pp-back" href="/index.html">← Back to all work</a></div>
+
+<div class="hero">
+<h1>Revive Farms Phase 1</h1>
+<div class="sub">44-Key Agro-Hospitality & Wellness Retreat · Bomfa, Ashanti Region, Ghana · 24 Acres (Phase 1 of 73)</div>
+<div class="tag">Where others see a village to leave, we see a village to invest in.</div>
+</div>
+<div class="wrap">
+<div class="stats s7">
+<div class="stat"><div class="v d">$1.61M</div><div class="l">Total investment</div></div>
+<div class="stat"><div class="v d">$36,596</div><div class="l">Cost per key</div></div>
+<div class="stat"><div class="v">21.0%</div><div class="l">Unlevered IRR</div></div>
+<div class="stat"><div class="v">24.6%</div><div class="l">Levered IRR</div></div>
+<div class="stat"><div class="v">4.34Ã</div><div class="l">Equity multiple</div></div>
+<div class="stat"><div class="v d">$1.15M</div><div class="l">Stabilized revenue</div></div>
+<div class="stat"><div class="v d">46.6%</div><div class="l">GOP margin</div></div>
+</div>
+</div>
+
+<div class="wrap">
+
+<section>
+<div class="st">Market Opportunity & Pricing Strategy</div>
+<div class="ss">Ghana's hospitality market has a structural gap. Revive Farms fills it.</div>
+<div class="stats s4" style="margin-bottom:20px;">
+<div class="stat"><div class="v">1.44M</div><div class="l">Intl arrivals (2024)</div></div>
+<div class="stat"><div class="v">61%</div><div class="l">Domestic share of spend</div></div>
+<div class="stat"><div class="v">68%</div><div class="l">National occupancy (2025p)</div></div>
+<div class="stat"><div class="v">$180</div><div class="l">National avg ADR (2025p)</div></div>
+</div>
+<div class="g2">
+<div>
+<div class="lb">International arrivals growth (thousands)</div>
+<div class="cw" style="height:200px;"><canvas id="arrC"></canvas></div>
+<div class="nt">Source: Ghana Tourism Authority, STR Global. *Projected.</div>
+<div style="margin-top:16px;">
+<div class="lb">Nearby Ashanti Region attractions</div>
+<table><tr><th>Attraction</th><th>Annual visitors</th><th>Distance</th></tr>
+<tr><td>Kumasi Zoo</td><td>133,954</td><td>36 mi</td></tr>
+<tr class="a"><td>Manhyia Palace Museum</td><td>106,100</td><td>36 mi</td></tr>
+<tr><td>Lake Bosomtwi</td><td>70,000</td><td>27 mi</td></tr>
+<tr class="a"><td>Bonwire Kente Village</td><td>25,000</td><td>29 mi</td></tr></table>
+<div class="nt">335,054 combined annual visitors within 36 miles of site. Source: GTA (2024).</div>
+</div>
+</div>
+<div>
+<div class="lb">Revive Farms pricing by room type</div>
+<table><tr><th>Type</th><th>Units</th><th>Sleeps</th><th>USD/Night</th><th>USD/Person</th></tr>
+<tr><td>Studio</td><td>20</td><td>2</td><td>$60</td><td>$30</td></tr>
+<tr class="a"><td>1 Bedroom</td><td>2</td><td>4</td><td>$85</td><td>$21</td></tr>
+<tr><td>2 Bedroom</td><td>22</td><td>6</td><td>$115</td><td>$19</td></tr>
+<tr class="hl"><td>Weighted avg</td><td>44</td><td>4.1</td><td>$89</td><td>$22</td></tr></table>
+<div style="margin-top:14px;">
+<div class="lb">Cost comparison: family & group travel</div>
+<table><tr><th></th><th>Revive</th><th>Budget</th><th>Mid-range</th></tr>
+<tr><td>Per person/night</td><td class="ok">$22</td><td>$35</td><td>$98</td></tr>
+<tr class="a"><td>Family of 4</td><td class="ok">$85</td><td>$140</td><td>$390</td></tr>
+<tr><td>Group of 6</td><td class="ok">$115</td><td>$210</td><td>$585</td></tr>
+<tr class="a"><td>Rooms needed (6 pax)</td><td class="ok">1</td><td>3</td><td>3</td></tr></table>
+</div>
+<div style="background:var(--sage);border-radius:6px;padding:14px 12px;text-align:center;margin-top:14px;">
+<div style="font-size:18px;font-weight:500;color:var(--ochre);">$89 ADR Â· $22/person</div>
+<div style="font-size:10px;color:rgba(255,255,255,0.6);margin-top:3px;">78% less per person than mid-range resorts</div>
+<div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:2px;">Made possible by group-friendly cabin design, not discounting</div>
+</div>
+<div style="margin-top:14px;">
+<div class="lb">Weekday demand drivers</div>
+<p style="font-size:10px;"><strong style="color:var(--sage);">Informal sector flexibility:</strong> 80% of Ghana's workforce is self-employed with flexible schedules, enabling midweek travel.</p>
+<p style="font-size:10px;"><strong style="color:var(--sage);">Remote work growth:</strong> 69.8% internet penetration. GROW program targeting 250K remote jobs by 2030.</p>
+<p style="font-size:10px;"><strong style="color:var(--sage);">Events & MICE:</strong> Ghana's meetings and conference market is growing rapidly, with the country joining ICCA in 2022.</p>
+<p style="font-size:10px;"><strong style="color:var(--sage);">Accessibility:</strong> Kumasi is a 30-minute flight from Accra. Bomfa is a 1-hour drive from Kumasi Airport.</p>
+</div>
+</div>
+</div>
+<div style="margin-top:20px;">
+<div class="lb">Why we believe we can hit 58% occupancy at $89/night</div>
+<p>Ghana's hospitality market has a structural gap: quality, nature-based accommodation that middle-income earners can actually afford. Existing resorts serve international tourists at $195â$400/night, pricing out the very population that most wants to escape the city. Revive Farms addresses this unmet demand at $22 per person per night, opening a market tier that currently does not exist.</p>
+<p>Our primary demand base is Ghana's urban middle class, particularly professionals and families in Accra and Kumasi seeking affordable weekend and midweek getaways. This domestic base is substantial: 61% of all tourism spending in Ghana comes from local travelers, with domestic trips projected to reach 6.6 million by 2025.</p>
+<p>This core demand is further bolstered by Ghana's rising prominence as a destination for the global Black diaspora. The Year of Return (2019), Beyond the Return (2020â2030), and the Black Star Experience (2025) have created a sustained, government-backed cultural tourism movement.</p>
+<p>Our stabilized occupancy assumption of 58% remains conservative, sitting 10 percentage points below Ghana's 68% projected national hotel average.</p>
+</div>
+</section>
+
+<section>
+<div class="st">Financial Performance</div>
+<div class="ss">Sources & uses, sensitivity, and capital structure</div>
+<div class="g2">
+<div>
+<div class="lb">Sources & uses</div>
+<table><tr><th colspan="3" style="text-align:left;">Sources</th></tr>
+<tr><td>Senior debt</td><td style="text-align:right;">$513,572</td><td style="text-align:right;color:#888;width:50px;">31.9%</td></tr>
+<tr class="a"><td>Mezzanine debt</td><td style="text-align:right;">$207,231</td><td style="text-align:right;color:#888;">12.9%</td></tr>
+<tr><td>LP equity</td><td style="text-align:right;">$800,486</td><td style="text-align:right;color:#888;">49.7%</td></tr>
+<tr class="a"><td>GP / sponsor equity</td><td style="text-align:right;">$88,943</td><td style="text-align:right;color:#888;">5.5%</td></tr>
+<tr class="tot"><td>Total sources</td><td style="text-align:right;">$1,610,232</td><td style="text-align:right;">100%</td></tr></table>
+<table style="margin-top:12px;"><tr><th colspan="3" style="text-align:left;">Uses</th></tr>
+<tr><td>Land & acquisition</td><td style="text-align:right;">$176,142</td><td style="text-align:right;color:#888;width:50px;">10.9%</td></tr>
+<tr class="a"><td>Soft costs</td><td style="text-align:right;">$283,650</td><td style="text-align:right;color:#888;">17.6%</td></tr>
+<tr><td>Hard costs (cabins)</td><td style="text-align:right;">$545,200</td><td style="text-align:right;color:#888;">33.9%</td></tr>
+<tr class="a"><td>Hard costs (comm. & farm)</td><td style="text-align:right;">$286,400</td><td style="text-align:right;color:#888;">17.8%</td></tr>
+<tr><td>FF&E + marketing</td><td style="text-align:right;">$81,950</td><td style="text-align:right;color:#888;">5.1%</td></tr>
+<tr class="a"><td>Contingency (20%)</td><td style="text-align:right;">$109,040</td><td style="text-align:right;color:#888;">6.8%</td></tr>
+<tr><td>Interest reserve + fees</td><td style="text-align:right;">$127,850</td><td style="text-align:right;color:#888;">7.9%</td></tr>
+<tr class="tot"><td>Total uses</td><td style="text-align:right;">$1,610,232</td><td style="text-align:right;">100%</td></tr></table>
+<p style="margin-top:14px;font-size:11px;">The capital stack is structured with conservative leverage at 44.8% debt to 55.2% equity. Senior construction debt is sourced from a Ghanaian bank (ADB or Ecobank), secured by personal guarantees from LP investors. ThirdWay Capital provides mezzanine debt with an option to convert to equity at stabilization. LP equity is raised from Ghanaian high-net-worth individuals at $75,000â$100,000 per investor. The sponsor team co-invests 5.5% alongside LPs.</p>
+</div>
+<div>
+<div class="lb">Exit cap rate sensitivity</div>
+<table><tr><th>Exit cap</th><th>8%</th><th>9%</th><th class="bc">10%*</th><th>11%</th><th>12%</th><th>13%</th><th>14%</th></tr>
+<tr><td>Sale price</td><td>$5.29M</td><td>$4.71M</td><td class="bc">$4.23M</td><td>$3.85M</td><td>$3.53M</td><td>$3.26M</td><td>$3.02M</td></tr>
+<tr class="a"><td>Unlev. IRR</td><td>22.8%</td><td>21.8%</td><td class="bc">21.0%</td><td>20.3%</td><td>19.6%</td><td>19.0%</td><td>18.5%</td></tr>
+<tr><td>Equity multiple</td><td class="ok">4.97Ã</td><td class="ok">4.62Ã</td><td class="bc ok">4.34Ã</td><td class="ok">4.10Ã</td><td class="ok">3.91Ã</td><td class="ok">3.75Ã</td><td class="ok">3.61Ã</td></tr></table>
+<div class="nt">* Base case at 10% exit cap. Returns exceed 18% IRR across all scenarios.</div>
+<div class="co" style="margin-top:20px;">
+<div><div class="cv">$2.87M</div><div class="cl">Cumulative operating CF</div></div>
+<div class="eq">=</div>
+<div><div class="cv" style="color:var(--ochre);">1.8Ã</div><div class="cl">Total project cost</div></div>
+</div>
+<div class="nt" style="text-align:center;">The project pays for itself through operations alone, before any exit sale.</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="st">Operating Projections & Capital Stack</div>
+<div class="ss">Pioneer â Ramp â Stabilized: the 8-year operating story</div>
+<div class="lb">8-year annual proforma</div>
+<table>
+<tr><th></th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th><th>Yr 4</th><th>Yr 5</th><th>Yr 6</th><th>Yr 7</th><th>Yr 8</th></tr>
+<tr><td>Phase</td><td class="pp">Pioneer</td><td class="pp">Pioneer</td><td class="pr">Ramp</td><td class="pr">Ramp</td><td class="pr">Ramp</td><td class="ps">Stable</td><td class="ps">Stable</td><td class="ps">Stable</td></tr>
+<tr class="a"><td>Occupancy</td><td>34%</td><td>41%</td><td>46%</td><td>52%</td><td>57%</td><td>58%</td><td>58%</td><td>58%</td></tr>
+<tr><td>ADR</td><td>$89</td><td>$93</td><td>$98</td><td>$101</td><td>$104</td><td>$107</td><td>$110</td><td>$113</td></tr>
+<tr class="a"><td>RevPAR</td><td>$31</td><td>$38</td><td>$45</td><td>$52</td><td>$59</td><td>$62</td><td>$64</td><td>$66</td></tr>
+<tr><td>Total revenue</td><td>$566K</td><td>$707K</td><td>$834K</td><td>$969K</td><td>$1,095K</td><td>$1,148K</td><td>$1,187K</td><td>$1,220K</td></tr>
+<tr class="a"><td>GOP</td><td>$226K</td><td>$300K</td><td>$370K</td><td>$441K</td><td>$508K</td><td>$536K</td><td>$555K</td><td>$572K</td></tr>
+<tr><td>GOP margin</td><td>40.0%</td><td>42.5%</td><td>44.3%</td><td>45.5%</td><td>46.4%</td><td>46.6%</td><td>46.8%</td><td>46.9%</td></tr>
+<tr class="tot"><td>NOI</td><td>$122K</td><td>$187K</td><td>$239K</td><td>$301K</td><td>$359K</td><td>$382K</td><td>$397K</td><td>$411K</td></tr>
+<tr><td>NOI margin</td><td>21.5%</td><td>26.5%</td><td>28.7%</td><td>31.0%</td><td>32.7%</td><td>33.2%</td><td>33.5%</td><td>33.6%</td></tr>
+<tr class="a"><td>CDA (4%)</td><td>$23K</td><td>$28K</td><td>$33K</td><td>$39K</td><td>$44K</td><td>$46K</td><td>$47K</td><td>$49K</td></tr>
+</table>
+<div class="g2" style="margin-top:24px;">
+<div>
+<div class="lb">Financing partners</div>
+<table><tr><th>Tranche</th><th>Amount</th><th>%</th><th>Provider</th><th>Terms</th></tr>
+<tr><td>Senior constr. debt</td><td>$514K</td><td>31.9%</td><td style="font-size:10px;">Ghanaian bank (ADB/Ecobank)</td><td style="font-size:10px;">8â11%, 24 mo</td></tr>
+<tr class="a"><td>Convertible mezz</td><td>$207K</td><td>12.9%</td><td style="font-size:10px;">ThirdWay Capital (Accra)</td><td style="font-size:10px;">12â15%, option to convert</td></tr>
+<tr><td>LP equity</td><td>$800K</td><td>49.7%</td><td style="font-size:10px;">Ghanaian HNWIs (8â9 investors)</td><td style="font-size:10px;">15% preferred return</td></tr>
+<tr class="a"><td>GP equity</td><td>$89K</td><td>5.5%</td><td style="font-size:10px;">Sponsor team</td><td style="font-size:10px;">Co-invest</td></tr>
+<tr class="tot"><td>Total</td><td>$1.61M</td><td>100%</td><td></td><td></td></tr></table>
+<div style="margin-top:16px;">
+<div class="lb">Permanent refinance (post-stabilization)</div>
+<table><tr><th>Parameter</th><th style="text-align:right;">Value</th></tr>
+<tr><td>Provider</td><td style="text-align:right;">Development Bank Ghana (DBG) / ADB Ghana</td></tr>
+<tr class="a"><td>Loan amount</td><td style="text-align:right;">$873K</td></tr>
+<tr><td>LTV</td><td style="text-align:right;">60%</td></tr>
+<tr class="a"><td>Interest rate</td><td style="text-align:right;">11%</td></tr>
+<tr><td>Interest-only period</td><td style="text-align:right;">36 months</td></tr>
+<tr class="a"><td>Amortization</td><td style="text-align:right;">25 years</td></tr></table>
+</div>
+</div>
+<div>
+<div class="lb">Debt service coverage ratio (permanent loan)</div>
+<div class="cw" style="height:190px;"><canvas id="dscrC"></canvas></div>
+<div class="nt">All 7 loan years exceed 1.30x covenant.</div>
+<div style="margin-top:20px;">
+<div class="lb">Revenue, GOP & NOI growth</div>
+<div style="display:flex;gap:12px;margin-bottom:4px;font-size:8px;color:#666;">
+<span style="display:flex;align-items:center;gap:3px;"><span style="width:8px;height:8px;border-radius:1px;background:var(--ochre);"></span>Revenue</span>
+<span style="display:flex;align-items:center;gap:3px;"><span style="width:8px;height:8px;border-radius:1px;background:var(--ls);"></span>GOP</span>
+<span style="display:flex;align-items:center;gap:3px;"><span style="width:8px;height:8px;border-radius:1px;background:var(--sage);"></span>NOI</span>
+</div>
+<div class="cw" style="height:190px;"><canvas id="revC"></canvas></div>
+<div class="nt">Revenue doubles from $566K to $1.22M. NOI grows 3.4Ã over the hold period.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="st">Investor Returns & Risk</div>
+<div class="ss">Stress-tested across exit, occupancy, currency, and hold scenarios</div>
+<div class="g3" style="margin-bottom:24px;">
+<div class="card"><svg width="28" height="28" viewBox="0 0 36 36"><path d="M18 2 L30 18 L18 34 L6 18 Z" fill="none" stroke="#7A8B6A" stroke-width="1.5"/><path d="M18 10 L25 18 L18 26 L11 18 Z" fill="#C49A5C"/></svg><div class="ct">Low basis, high value</div><div class="cd">$6,510/acre vs $30Kâ$100K coastal. $36,596/key total basis.</div></div>
+<div class="card"><svg width="28" height="28" viewBox="0 0 36 36"><rect x="2" y="28" width="32" height="6" rx="2" fill="#C49A5C"/><path d="M6 26 L12 20 L18 22 L24 14 L30 8" fill="none" stroke="#7A8B6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="8" r="3" fill="#7A8B6A"/></svg><div class="ct">Revenue floor + ramp</div><div class="cd">$48K/year fixed lease income provides near-term stability during pioneer phase.</div></div>
+<div class="card"><svg width="28" height="28" viewBox="0 0 36 36"><circle cx="12" cy="14" r="5" fill="none" stroke="#7A8B6A" stroke-width="2"/><circle cx="24" cy="14" r="5" fill="none" stroke="#7A8B6A" stroke-width="2"/><circle cx="18" cy="24" r="5" fill="none" stroke="#A8B898" stroke-width="2"/></svg><div class="ct">Group pricing advantage</div><div class="cd">$89 ADR, but $22/person is 78% below mid-range. Design strategy, not discount.</div></div>
+</div>
+<div class="g2">
+<div>
+<div class="lb">Returns summary</div>
+<table><tr><th></th><th>IRR</th><th>EM</th><th>Distributions</th><th>Invested</th></tr>
+<tr><td>Unlevered</td><td>21.0%</td><td>4.34Ã</td><td style="color:#aaa;">â</td><td>$1,610K</td></tr>
+<tr class="a"><td>Levered</td><td>24.6%</td><td>5.04Ã</td><td style="color:#aaa;">â</td><td>$1,025K</td></tr>
+<tr class="hl"><td>Limited partner</td><td>23.3%</td><td>4.52Ã</td><td>$3,243K</td><td>$922K</td></tr>
+<tr><td>Sponsor / GP</td><td>32.6%</td><td>9.80Ã</td><td>$901K</td><td>$102K</td></tr></table>
+<div style="margin-top:16px;">
+<div class="lb">Occupancy sensitivity (at 10% exit cap)</div>
+<table><tr><th>Stabilized occ.</th><th>45%</th><th>50%</th><th>55%</th><th class="bc">58%*</th></tr>
+<tr><td>Unlev. IRR</td><td>17.9%</td><td>19.2%</td><td>20.3%</td><td class="bc">21.0%</td></tr>
+<tr class="a"><td>Equity multiple</td><td class="ok">3.64Ã</td><td class="ok">3.91Ã</td><td class="ok">4.18Ã</td><td class="bc ok">4.34Ã</td></tr></table>
+<div class="nt">* Base case. National average is 68%. Even at 45%, returns exceed 17.9% IRR.</div>
+</div>
+<div style="margin-top:16px;">
+<div class="lb">Waterfall structure â 90/10 LP/GP</div>
+<div class="wf">
+<div style="background:var(--sage);"><div class="wh">Below 15%</div><div class="wv">90/10</div><div class="wl">LP/GP</div></div>
+<div style="background:var(--ls);"><div class="wh">15%â18%</div><div class="wv">85/15</div><div class="wl">+ promote</div></div>
+<div style="background:var(--ochre);"><div class="wh">18%â22%</div><div class="wv">80/20</div><div class="wl">+ promote</div></div>
+<div style="background:#A07840;"><div class="wh">Above 22%</div><div class="wv">70/30</div><div class="wl">+ promote</div></div>
+</div>
+</div>
+<div style="margin-top:16px;">
+<div class="lb">Currency stress test</div>
+<table><tr><th>Deprec.</th><th>GHS/$</th><th>NOI</th><th>DSCR</th></tr>
+<tr class="hl"><td>0% (base)</td><td>10.8</td><td>$382K</td><td class="ok">3.72Ã</td></tr>
+<tr><td>10%</td><td>11.9</td><td>$343K</td><td class="ok">3.35Ã</td></tr>
+<tr class="a"><td>20%</td><td>13.4</td><td>$305K</td><td class="ok">2.97Ã</td></tr>
+<tr><td>30%</td><td>15.4</td><td>$267K</td><td class="ok">2.60Ã</td></tr>
+<tr class="a"><td>40%</td><td>17.9</td><td>$229K</td><td class="ok">2.23Ã</td></tr>
+<tr><td>50%</td><td>21.5</td><td>$191K</td><td class="wn">1.86Ã</td></tr>
+<tr class="a"><td>60%</td><td>26.9</td><td>$153K</td><td class="wn">1.49Ã</td></tr>
+<tr class="br"><td>65%</td><td>30.8</td><td>$134K</td><td>1.30Ã</td></tr></table>
+<div style="margin-top:6px;padding:6px 8px;background:var(--sand);border-radius:4px;font-size:9px;color:var(--sage);line-height:1.4;"><strong>Breach at 65% depreciation.</strong> Ghana's worst: 47% over 3 years.</div>
+</div>
+</div>
+<div>
+<div class="lb">Key risks & mitigations</div>
+<div style="padding:10px 0;border-bottom:1px solid #eee;"><div style="font-size:11px;font-weight:500;color:#333;margin-bottom:3px;">Pioneering concept</div><div style="font-size:10px;color:#666;line-height:1.5;">No direct comps for agro-tourism at this price point in Ghana. <strong style="color:#333;">At 45% occupancy the project still returns 3.64Ã equity and 17.9% IRR.</strong></div></div>
+<div style="padding:10px 0;border-bottom:1px solid #eee;"><div style="font-size:11px;font-weight:500;color:#333;margin-bottom:3px;">Construction materials</div><div style="font-size:10px;color:#666;line-height:1.5;">Form Farm system uses experimental materials. <strong style="color:#333;">20% hard cost contingency is budgeted. Phase 1 serves as the live test before committing to full 166-key buildout.</strong></div></div>
+<div style="padding:10px 0;border-bottom:1px solid #eee;"><div style="font-size:11px;font-weight:500;color:#333;margin-bottom:3px;">Currency risk</div><div style="font-size:10px;color:#666;line-height:1.5;"><strong style="color:#333;">DSCR of 3.72Ã means the cedi would need to depreciate 65% before breaching the loan covenant â worse than Ghana's worst historical stretch of 47%.</strong></div></div>
+<div style="padding:10px 0;border-bottom:1px solid #eee;"><div style="font-size:11px;font-weight:500;color:#333;margin-bottom:3px;">Occupancy ramp</div><div style="font-size:10px;color:#666;line-height:1.5;"><strong style="color:#333;">Fixed lease income ($48K/year) provides near-term stability during the pioneer phase.</strong></div></div>
+<div style="padding:10px 0;"><div style="font-size:11px;font-weight:500;color:#333;margin-bottom:3px;">Exit valuation</div><div style="font-size:10px;color:#666;line-height:1.5;"><strong style="color:#333;">Cumulative operating cash flow of $2.87M equals 1.8Ã total project cost. Even at a 14% exit cap, returns still exceed 18.5% IRR.</strong></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="st">Farm Economics</div>
+<div class="ss">20 acres of activated farmland powering livelihoods and cash flow</div>
+<div class="g2">
+<div>
+<div class="lb">Farm economics</div>
+<table><tr><th>Parameter</th><th style="text-align:right;">Value</th></tr>
+<tr><td>Leasable farmland</td><td style="text-align:right;font-weight:500;">20 acres</td></tr>
+<tr class="a"><td>Farm infrastructure investment</td><td style="text-align:right;font-weight:500;">$100,000</td></tr>
+<tr><td>Annual rent per acre</td><td style="text-align:right;">GHS 18,000 ($1,674)</td></tr>
+<tr class="a"><td>Annual escalation</td><td style="text-align:right;">4%</td></tr>
+<tr><td>Year 1 net cash flow</td><td style="text-align:right;" class="ok">$22,716</td></tr>
+<tr class="a"><td>Year 8 net cash flow</td><td style="text-align:right;" class="ok">$29,892</td></tr>
+<tr class="tot"><td>8-year cumulative net</td><td style="text-align:right;">$209,307 (2.1Ã)</td></tr></table>
+<p style="font-size:10px;margin-top:14px;"><strong style="color:var(--sage);">Local supply chain:</strong> On-site farmers supply the tenant restaurants and market vendors, creating a closed-loop food economy.</p>
+<p style="font-size:10px;"><strong style="color:var(--sage);">Cash flow buffer:</strong> Farm lease income is contractually fixed and flows regardless of nightly cabin occupancy.</p>
+</div>
+<div>
+<p>Twenty acres of activated farmland create livelihoods for independent farmers who would otherwise lack access to quality land, irrigation, and processing infrastructure. The farm operator runs a Youth Agro Incubator funded by the 4% Community Development Agreement, training young people to launch agro-businesses across the value chain.</p>
+<p>In a region where out-migration is hollowing out farming communities, the farm demonstrates that agriculture and agro-business can be a viable career path, not a last resort.</p>
+<div style="margin-top:14px;">
+<div class="lb">Cabin construction cost</div>
+<table><tr><th>Type</th><th style="text-align:right;">Cost / Unit</th></tr>
+<tr><td>Studio</td><td style="text-align:right;font-weight:500;">$3,700</td></tr>
+<tr class="a"><td>1 Bedroom</td><td style="text-align:right;font-weight:500;">$6,170</td></tr>
+<tr><td>2 Bedroom</td><td style="text-align:right;font-weight:500;">$8,640</td></tr></table>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="st">Social Impact & Community Development</div>
+<div class="ss">Financial returns and community outcomes reinforce each other</div>
+<div class="stats s4" style="margin-bottom:24px;">
+<div class="stat"><div class="v">200+</div><div class="l">Total ecosystem jobs</div><div class="s">50+ direct at Revive Farms</div></div>
+<div class="stat"><div class="v">20 acres</div><div class="l">Farmland activated</div><div class="s">Leased to independent farmers</div></div>
+<div class="stat"><div class="v o">$45,517</div><div class="l">Annual CDA at stabilization</div><div class="s">$308K+ cumulative over 8 years</div></div>
+<div class="stat"><div class="v">100+</div><div class="l">Commercial units</div><div class="s">Stalls, restaurants, greenhouses</div></div>
+</div>
+<div class="g2">
+<div>
+<div class="pill"><div class="pill-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3.5" stroke="#7A8B6A" stroke-width="1.5"/><path d="M5 21v-1a5 5 0 0110 0v1" stroke="#7A8B6A" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pt">Employment & economic activity</div><div class="pd">50+ direct jobs. 200+ total ecosystem jobs including restaurant staff, market vendors, farm workers, tour guides, artisans, and supply chain providers.</div></div></div>
+<div class="pill"><div class="pill-i gold"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="3" stroke="#854F0B" stroke-width="1.5"/><circle cx="16" cy="8" r="3" stroke="#854F0B" stroke-width="1.5"/><path d="M2 20v-1a4 4 0 014-4h4a4 4 0 014 4v1" stroke="#C49A5C" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pt">Youth pathways</div><div class="pd">4% CDA: $22,659 (Year 1) rising to $45,517 (stabilized). $308,000+ cumulative. Funds Youth Agro Incubator. Directly reverses rural-to-urban migration.</div></div></div>
+<div class="pill"><div class="pill-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#7A8B6A" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#A8B898" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#A8B898" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#7A8B6A" stroke-width="1.5"/></svg></div><div><div class="pt">Cultural & commercial vitality</div><div class="pd">100+ commercial units leased to local entrepreneurs. Artisan workshops in pottery, weaving, cooking, and woodcraft. Tourism spending circulates locally.</div></div></div>
+</div>
+<div>
+<p>Revive Farms is designed to be replicated. In Bomfa, the anchor is farming. In a coastal village, it could be fishing. In a craft town, weaving. The model is the same: use hospitality as infrastructure to channel urban spending into rural economies, creating jobs, activating land, and giving young people a reason to stay.</p>
+<div class="closing" style="margin-top:16px;">
+<div class="bd">Phase 1 proves the typology. What comes next is not one resort â it is a new asset class for rural revitalization across Ghana and West Africa.</div>
+<div class="pn">Where others see a village to leave, we see a village to invest in.</div>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<footer>
+  <div class="footer-left">R. Kofi Bempong</div>
+  <div class="footer-links">
+    <a href="mailto:bempongkb@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/rkbempong" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+new Chart(document.getElementById('arrC'),{type:'bar',data:{labels:['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024*','2025*'],datasets:[{data:[897,933,980,1045,1130,355,620,960,1200,1440,1700],backgroundColor:['#A8B898','#A8B898','#A8B898','#A8B898','#7A8B6A','#8B3A2A','#C49A5C','#A8B898','#A8B898','#7A8B6A','#7A8B6A'],borderRadius:2,barPercentage:0.75}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{font:{size:8},color:'#888',maxRotation:45},grid:{display:false}},y:{ticks:{font:{size:8},color:'#888'},grid:{color:'#f0f0f0'},min:0,max:1900}},plugins:{legend:{display:false}}},plugins:[{id:'bv',afterDatasetsDraw:function(c){var x=c.ctx,m=c.getDatasetMeta(0);x.save();x.font='500 7px sans-serif';x.fillStyle='#555';x.textAlign='center';m.data.forEach(function(b,i){var v=c.data.datasets[0].data[i];x.fillText(v>=800?(v/1000).toFixed(1)+'M':v+'K',b.x,b.y-4);});x.restore();}}]});
+new Chart(document.getElementById('dscrC'),{type:'bar',data:{labels:['Yr 1','Yr 2','Yr 3','Yr 4','Yr 5','Yr 6','Yr 7'],datasets:[{data:[1.95,2.49,3.13,3.49,3.72,3.87,3.53],backgroundColor:'#7A8B6A',borderRadius:2,barPercentage:0.6}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{font:{size:9},color:'#888'},grid:{display:false}},y:{ticks:{font:{size:8},color:'#888',callback:function(v){return v.toFixed(1)+'x';}},grid:{color:'#f0f0f0'},min:0,max:4.5}},plugins:{legend:{display:false}}},plugins:[{id:'cv',afterDraw:function(c){var y=c.scales.y.getPixelForValue(1.30),x=c.ctx;x.save();x.setLineDash([5,3]);x.strokeStyle='#8B3A2A';x.lineWidth=1.5;x.beginPath();x.moveTo(c.chartArea.left,y);x.lineTo(c.chartArea.right,y);x.stroke();x.setLineDash([]);x.fillStyle='#8B3A2A';x.font='500 8px sans-serif';x.fillText('1.30x covenant',c.chartArea.right-70,y-5);x.restore();}},{id:'lb',afterDatasetsDraw:function(c){var x=c.ctx,m=c.getDatasetMeta(0);x.save();x.font='500 9px sans-serif';x.fillStyle='#7A8B6A';x.textAlign='center';m.data.forEach(function(b,i){x.fillText(c.data.datasets[0].data[i].toFixed(2)+'x',b.x,b.y-5);});x.restore();}}]});
+new Chart(document.getElementById('revC'),{type:'bar',data:{labels:['Yr 1','Yr 2','Yr 3','Yr 4','Yr 5','Yr 6','Yr 7','Yr 8'],datasets:[{label:'Revenue',data:[566,707,834,969,1095,1148,1187,1220],backgroundColor:'#C49A5C',borderRadius:2,barPercentage:0.8},{label:'GOP',data:[226,300,370,441,508,536,555,572],backgroundColor:'#A8B898',borderRadius:2,barPercentage:0.8},{label:'NOI',data:[122,187,239,301,359,382,397,411],backgroundColor:'#7A8B6A',borderRadius:2,barPercentage:0.8}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{font:{size:9},color:'#888'},grid:{display:false}},y:{ticks:{font:{size:8},color:'#888',callback:function(v){return '$'+v+'K';}},grid:{color:'#f0f0f0'},min:0,max:1400}},plugins:{legend:{display:false}}}});
+</script>
+
+<script>
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
