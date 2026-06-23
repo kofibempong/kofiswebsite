@@ -1,5 +1,6 @@
-# Encrypted page build script — never commit this
+# Encrypted page build script & local preview — never commit these
 loan/build.py
+loan/preview.html
 
 # macOS
 .DS_Store
