@@ -1,0 +1,5 @@
+# Encrypted page build script — never commit this
+loan/build.py
+
+# macOS
+.DS_Store
