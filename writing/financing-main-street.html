@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QJEPQLY52"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6QJEPQLY52');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financing Main Street America — R. Kofi Bempong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #FAFAF7;
+      --color-text: #1A1A18;
+      --color-text-secondary: #5C5C57;
+      --color-text-light: #8A8A84;
+      --color-accent: #2C5F4B;
+      --color-accent-light: #E8F0EC;
+      --color-border: #E5E5E0;
+      --color-card-bg: #FFFFFF;
+      --color-tag-bg: #F0EFEA;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --max-width: 1200px;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 3rem;
+      --space-xl: 5rem;
+      --space-2xl: 8rem;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body); background: var(--color-bg);
+      color: var(--color-text); line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--color-accent); color: #fff; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,250,247,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-name {
+      font-family: var(--font-display); font-size: 1.15rem;
+      color: var(--color-text); text-decoration: none; cursor: pointer;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 400; color: var(--color-text-secondary);
+      text-decoration: none; letter-spacing: 0.03em; text-transform: uppercase;
+      transition: color 0.2s; cursor: pointer;
+    }
+    .nav-links a:hover { color: var(--color-accent); }
+
+    /* ARTICLE PAGE */
+    .article-hero {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: calc(var(--space-2xl) + 2rem) 2rem var(--space-lg);
+    }
+    .pp-back {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.85rem; color: var(--color-text-secondary); text-decoration: none;
+      margin-bottom: var(--space-lg); cursor: pointer; transition: color 0.2s;
+    }
+    .pp-back:hover { color: var(--color-accent); }
+    .article-tag {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--color-accent); margin-bottom: var(--space-sm);
+    }
+    .article-title {
+      font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 400; line-height: 1.2; margin-bottom: var(--space-sm); max-width: 720px;
+    }
+    .article-meta-line {
+      font-size: 0.88rem; color: var(--color-text-secondary); font-weight: 300;
+      margin-bottom: var(--space-md);
+    }
+    .article-body {
+      max-width: 680px; margin: 0 auto; padding: 0 2rem var(--space-xl);
+    }
+    .article-body p {
+      font-size: 1.05rem; font-weight: 300; line-height: 1.9;
+      color: var(--color-text-secondary); margin-bottom: var(--space-md);
+    }
+    .article-body p:first-child { font-size: 1.15rem; color: var(--color-text); }
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 400;
+      margin-top: var(--space-lg); margin-bottom: var(--space-sm); color: var(--color-text);
+    }
+    .pull-quote {
+      border-left: 3px solid var(--color-accent); margin: var(--space-lg) 0;
+      padding: var(--space-sm) var(--space-md); font-family: var(--font-display);
+      font-size: 1.25rem; line-height: 1.5; color: var(--color-text);
+    }
+    .section-break {
+      text-align: center; color: var(--color-text-light); letter-spacing: 0.3em;
+      margin: var(--space-lg) 0; font-size: 0.9rem;
+    }
+    .download-card {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--color-accent-light); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 1.25rem 1.5rem; margin: var(--space-lg) 0;
+    }
+    .download-icon svg {
+      width: 28px; height: 28px; stroke: var(--color-accent);
+      fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .download-text { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; }
+    .download-text strong { font-size: 0.95rem; color: var(--color-text); }
+    .download-text span { font-size: 0.82rem; color: var(--color-text-secondary); }
+    .download-btn {
+      background: var(--color-accent); color: #fff; text-decoration: none;
+      padding: 0.55rem 1.1rem; border-radius: 5px; font-size: 0.85rem;
+      font-weight: 500; white-space: nowrap; transition: opacity 0.2s;
+    }
+    .download-btn:hover { opacity: 0.85; }
+
+    /* PP NAV */
+    .pp-nav {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: var(--space-lg) 2rem var(--space-xl);
+      border-top: 1px solid var(--color-border); text-align: center;
+    }
+    .pp-nav-label {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--color-text-light); margin-bottom: var(--space-xs);
+    }
+    .pp-nav a {
+      font-family: var(--font-display); font-size: 1.5rem; color: var(--color-text);
+      text-decoration: none; transition: color 0.2s; cursor: pointer;
+    }
+    .pp-nav a:hover { color: var(--color-accent); }
+
+    /* FOOTER */
+    footer {
+      max-width: var(--max-width); margin: 0 auto; padding: var(--space-lg) 2rem;
+      border-top: 1px solid var(--color-border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-left { font-family: var(--font-display); font-size: 1rem; }
+    .footer-links { display: flex; gap: var(--space-md); }
+    .footer-links a {
+      font-size: 0.85rem; color: var(--color-text-secondary); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--color-accent); }
+
+    /* HAMBURGER NAV */
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--color-text); transition: all 0.25s; transform-origin: center;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-inner { padding: 0.85rem 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      .nav-links a { font-size: 0.75rem; }
+      .article-hero, .article-body, .pp-nav { padding-left: 1.25rem; padding-right: 1.25rem; }
+      footer { flex-direction: column; gap: var(--space-sm); text-align: center; padding: var(--space-lg) 1.25rem; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none; position: fixed; top: 57px; left: 0; right: 0;
+        background: rgba(250,250,247,0.97); backdrop-filter: blur(12px);
+        flex-direction: column; gap: 0; padding: 0.5rem 0;
+        border-bottom: 1px solid var(--color-border); z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0; }
+      .nav-links a { display: block; padding: 0.85rem 1.5rem; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="/index.html">R. Kofi Bempong</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/writing.html">Writing</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/kofi-bempong-cv.pdf" target="_blank">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="article-hero">
+    <a class="pp-back" href="/writing.html">← Back to writing</a>
+    <div class="article-tag">Placemaking</div>
+    <h1 class="article-title">Financing Main Street America</h1>
+    <div class="article-meta-line">How a National Place-Based Model Pays for Its Work · R. Kofi Bempong · May 2026</div>
+  </div>
+
+  <div class="article-body">
+
+    <p>Main Street America is the oldest place-based economic development model in the country — nearly fifty years old, more than 1,200 designated districts, over $107 billion in reported reinvestment since 1980. It gets cited constantly. But in all the citing, one question almost never comes up: where does the money actually come from?</p>
+
+    <p>I came to it through place-based economic development, the thread that runs through most of my work. Main Street is the model everyone points to. Yet when I went looking for a clear account of how it finances its work — not what it does, but how it pays for the doing — I couldn't find one written down in one place. So I wrote it.</p>
+
+    <div class="pull-quote">
+      Capital exists. Demand exists. But the two cannot meet without an intermediary — and being that intermediary is the whole point.
+    </div>
+
+    <p>The surprising answer is that Main Street America deploys almost no capital of its own. It is not a bank, a CDFI, or a real-estate fund. It works as an intermediary: it aggregates small, marginal projects that no single funder would underwrite alone, and stacks them onto the financing tools already sitting in the economic-development toolkit — Community Development Block Grants, federal and state historic tax credits, SBA loans, business improvement districts, tax increment financing, and philanthropy. The technique is capital stacking; what's distinctive is the scale, brought down to the storefront.</p>
+
+    <p>The paper traces that machinery at three levels — national, state, and local — then follows it into two very different places. Pennsylvania runs a three-layer, state-coordinated architecture funded through its new $20 million Main Street Matters initiative, with Main Street Gettysburg as the local case. Boston runs the country's first citywide Main Streets program, a two-layer city-coordinated model, with Roslindale Village as the local case. The contrast turns out to explain a lot about where each district's most reliable dollar actually comes from — and it is almost never the federal one.</p>
+
+    <div class="section-break">* * *</div>
+
+    <h2>What's inside</h2>
+
+    <p>A look at the Four-Point Approach and why it tells a district what to do but not how to pay for it; the mechanics of capital stacking and the capital-allocation gap it exists to close; the three-tier organizational architecture and the federal, state, municipal, and philanthropic sources each district draws on; and the two local case studies followed source by source. It opens with an honest note on the network's self-reported impact figures — and what the most rigorous independent research does, and does not, support.</p>
+
+    <div class="download-card">
+      <div class="download-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+      </div>
+      <div class="download-text">
+        <strong>Download the full paper</strong>
+        <span>Financing Main Street America: How a National Place-Based Model Pays for Its Work (PDF)</span>
+      </div>
+      <a href="../Financing_Main_Street_America_Kofi_Bempong.pdf" target="_blank" class="download-btn">Download</a>
+    </div>
+
+  </div>
+
+  <div class="pp-nav">
+    <div class="pp-nav-label">Back to</div>
+    <a href="/writing.html">← Writing</a>
+  </div>
+
+<footer>
+  <div class="footer-left">R. Kofi Bempong</div>
+  <div class="footer-links">
+    <a href="mailto:kofi@kofibempong.com">Email</a>
+    <a href="https://linkedin.com/in/rkbempong" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+  <script>
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
